@@ -83,7 +83,7 @@ colors:
   # Default colours
   primary:
     background: '0x101015'
-    foreground: '0xe08005'
+    foreground: '0xd47505'
 
   # Colors that should be used to draw the terminal cursor. If these are unset,
   # the cursor colour will be the inverse of the cell colour.
