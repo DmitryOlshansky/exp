@@ -38,8 +38,8 @@ zstyle ':completion:*' rehash true
 bindkey "\e[3~" delete-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
-bindkey "^[[A"  history-beginning-search-backward
-bindkey "^[[B"  history-beginning-search-forward
+bindkey "^[[A"  history-search-backward
+bindkey "^[[B"  history-search-forward
 bindkey '^[[1;5D'   backward-word
 bindkey '^[[1;5C'   forward-word
 
@@ -48,3 +48,10 @@ bindkey '^[[1;5C'   forward-word
 alias ping='ping -c 3'
 alias g='grep'
 alias se="sudo $EDITOR"
+
+
+
+# auto start sway WM if on first tty
+if [ "$(tty)" = "/dev/ttyv0" ] ; then
+	exec /usr/local/bin/sway
+fi
